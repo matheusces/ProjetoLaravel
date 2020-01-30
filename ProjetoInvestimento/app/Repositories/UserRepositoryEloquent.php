@@ -15,6 +15,16 @@ use App\Validators\UserValidator;
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {
+    //tipagem de parâmetros permitida apenas no php 7
+    public function selectBoxList(){
+        $descricao = 'name';
+        $chave = 'id';
+
+        //retorna todos os campos name e id de user
+        return $this->model->pluck($descricao, $chave)->all();
+    }
+
+
     /**
      * Specify Model class name
      *

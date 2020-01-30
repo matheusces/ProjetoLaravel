@@ -1,0 +1,4 @@
+php artisan serve ---- roda o servidor local
+php artisan make:entity nomeDaEntidade ------ cria uma nova entidade
+php artisan migrate ---- executa a migration criada
+php artisan route:list ---- lista todas as rotas criadas
